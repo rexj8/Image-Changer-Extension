@@ -1,24 +1,20 @@
-images=[
-    "https://www.lovethispic.com/uploaded_images/80903-Funny-Will-Smith.jpg",
-    "https://media1.popsugar-assets.com/files/thumbor/BrT6JuS0boRe5dXrvkKQ4rzGNME/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2019/02/10/215/n/1922283/ad358e065c60f5ad56e7e8.61160339_/i/Funny-Tweets-About-Smith-Genie-Aladdin-Trailer.jpg",
-    "https://www.cliccamaqua.com.br/images/noticias/img_57169_foto_1_a.jpg",
-    "https://observatoriodocinema.uol.com.br/wp-content/uploads/2020/07/will-smith-foto.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/3/3f/TechCrunch_Disrupt_2019_%2848834434641%29_%28cropped%29.jpg",
-    "https://exame.com/wp-content/uploads/2016/09/size_960_16_9_will_smith_ator3.jpg?quality=70&strip=info",
-    "https://conteudo.imguol.com.br/c/entretenimento/e3/2020/07/09/will-smith-1594320007897_v2_450x337.jpg",
-    "https://i0.wp.com/mixdeseries.com.br/wp-content/uploads/2018/07/will-smith-4-e1534947669898.jpg?fit=871%2C499&ssl=1",
-  ];
+images = [
+  "https://images.unsplash.com/photo-1508974491678-7ec251d629fd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=827&q=80",
+  "https://images.unsplash.com/photo-1601780509134-a47033c28e57?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1925&q=80",
+  "https://images.unsplash.com/photo-1530675706010-bc677ce30ab6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=750&q=80",
+  "https://images.unsplash.com/photo-1571073405486-a6e20e917fa8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=443&q=80",
+  "https://images.unsplash.com/photo-1516298252535-cf2ac5147f9b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+  "https://images.unsplash.com/photo-1533106418989-88406c7cc8ca?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+  "https://images.unsplash.com/photo-1579508542697-bb18e7d9aeaa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+  "https://images.unsplash.com/photo-1541348263662-e068662d82af?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80",
+  "https://images.unsplash.com/photo-1562911791-c7a97b729ec5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=808&q=80",
+];
 
-  function random(a){
-      const randomIndex=Math.floor(Math.random()*a.length);
+var img = document.getElementsByTagName("img");
 
-      const item = a[randomIndex];
+console.log("length -> " + img.length);
 
-      return item;
-  }
-
-  var img = document.getElementsByTagName("img");
-
-
-
-  img.src=random(images);
+for(let i=0 ; i<img.length ; i++){
+    const randomIndex = Math.floor(Math.random() * images.length);
+    img[i].src = images[randomIndex];
+}
